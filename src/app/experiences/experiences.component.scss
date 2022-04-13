@@ -1,0 +1,63 @@
+$primary: rgba(233,103,103,255);
+$secondary: rgba(120,120,120,255);
+
+main {
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 1px 1px 3px black;
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    padding: 60px 80px 30px;
+    &__txt {
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            padding-bottom: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 200px;
+                border-bottom: 4px solid $primary;
+            }
+        }
+        table {
+            padding-top: 20px;
+            text-align: left;
+            th {
+                width: 160px;
+                text-transform: uppercase;
+                padding: 10px;
+            }
+            td {
+                color: $secondary;
+                padding: 10px;
+            }
+            .title {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+        &-more-icon {
+            padding-top: 15px;
+            i {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: rgba(233,103,103,255);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
