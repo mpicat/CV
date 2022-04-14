@@ -1,7 +1,7 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
-import * as fr from '@angular/common/locales/fr'
+import * as fr from '@angular/common/locales/fr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { PasseTempsComponent } from './passe-temps/passe-temps.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FormationComponent } from './formation/formation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormationComponent } from './formation/formation.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }

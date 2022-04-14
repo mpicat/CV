@@ -23,6 +23,10 @@ a {
     color: $primary;
 }
 
+.phone {
+    display: none;
+}
+
 // tablette
 @media screen and (max-width: 992px) {
     ul {
@@ -36,8 +40,19 @@ a {
 
 // phone
 @media screen and (max-width: 768px) {
-    a {
-        color: red;
+    .phone {
+        display: flex;
+        padding: 10px;
+        button {
+            background-color: $primary;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 1.2rem;
+            border: none;
+        }
+    }
+    ul {
+        display: none;
     }
 
 }
