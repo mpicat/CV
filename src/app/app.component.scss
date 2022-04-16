@@ -1,6 +1,103 @@
+$primary: rgba(233,103,103,255);
+$secondary: rgba(255,255,255, 0.9);
+
 .container {
     background-image: url(../assets/wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+
+.nav {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.btn-nav {
+    font-size: 2.2rem;
+    cursor: pointer;
+    background-color: $secondary;
+    margin: 30px 15px 15px;
+    padding: 10px 20px;
+    color: $primary;
+    border: none;
+    border-radius: 5px;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        border-bottom: 4px solid $primary;
+    }
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.active {
+    color: $primary;
+}
+
+.download {
+        background-color: $primary;
+        padding: 8px;
+        margin-top: 30px;
+        width: fit-content;
+        font-weight: 500;
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0 40px 60px;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        border-bottom: 4px solid $primary;
+    }
 }

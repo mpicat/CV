@@ -6,19 +6,18 @@ import * as fr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HeaderComponent } from './header/header.component';
 import { CompetencesComponent } from './competences/competences.component';
 import { PasseTempsComponent } from './passe-temps/passe-temps.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FormationComponent } from './formation/formation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+ 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    HeaderComponent,
     CompetencesComponent,
     PasseTempsComponent,
     ExperiencesComponent,
@@ -28,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }

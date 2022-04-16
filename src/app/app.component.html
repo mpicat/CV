@@ -1,4 +1,25 @@
-<div class="container">
-  <app-header></app-header>
+<mat-drawer-container style="height: 100vh;" class="container">
+  <mat-drawer #sidenav mode="side" style="padding: 20px; width: 300px;" class="nav">
+    <ul>
+      <li><h2>Menu</h2></li>
+      <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
+      <li><a [routerLink]="['/competences']" routerLinkActive="active">Compétences</a></li>
+      <li><a [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a></li>
+      <li><a [routerLink]="['/experiences']" routerLinkActive="active">Expériences</a></li>
+      <li><a [routerLink]="['/formation']" routerLinkActive="active">Formation</a></li>
+      <li><a [routerLink]="['/passe-temps']" routerLinkActive="active">Passe-temps</a></li>
+      <a href="./assets/CV Maxime PICAT.pdf" class="download">CV en format PDF</a>
+    </ul>
+    <ul class="info">
+      <li><h3>Données</h3></li>
+      <li>picatmaxime25@gmail.com</li>
+      <li>126 Boulevard Henri Barbusse</li>
+      <li>91210 DRAVEIL</li>
+      <li>06.32.73.57.72</li>
+    </ul>
+  </mat-drawer>
+  <div>
+      <button (click)="sidenav.toggle(); toggleClass = !toggleClass" class="btn-nav"><i [ngClass]="{'fa-times': toggleClass}" class="fa-solid fa-bars"></i></button>
+  </div>
   <router-outlet></router-outlet>
-</div>
+</mat-drawer-container>
