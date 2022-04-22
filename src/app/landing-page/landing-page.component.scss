@@ -5,7 +5,7 @@ $secondary: rgba(255,255,255, 0.9);
 .container {
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
+    margin: auto;
     margin-top: 200px;
     position: relative;
     z-index: 2;
@@ -22,7 +22,7 @@ $secondary: rgba(255,255,255, 0.9);
 .container-content {
     display: flex;
     position: relative;
-    width: 600px;
+    width: 550px;
     &__txt {
         width: 300px;
         h1 {
@@ -44,5 +44,21 @@ $secondary: rgba(255,255,255, 0.9);
     img {
         width: 250px;
         border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        display: none;
+    }
+    .container {
+        margin-top: 150px;
+        padding: 60px 30px 0;
+    }
+    .container-content {
+        width: 250px;
+        &__txt {
+            width: 100%;
+        }
     }
 }

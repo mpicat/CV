@@ -10,7 +10,6 @@ $secondary: rgba(255,255,255, 0.9);
 
 .container-title {
     width: calc(88% + 15px);
-    min-width: 300px;
     margin-top: 15px;
     background-color: $secondary;
     border-radius: 5px;
@@ -59,5 +58,11 @@ $secondary: rgba(255,255,255, 0.9);
         a {
             color: black;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-title {
+        width: 300px;
     }
 }
