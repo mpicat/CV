@@ -4,65 +4,56 @@ $secondary: rgba(255,255,255, 0.9);
 .container {
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
-    margin-top: 10%;
-}
-
-.container-title {
-    width: calc(88% + 15px);
-    margin-top: 15px;
     background-color: $secondary;
-    border-radius: 5px;
-    padding: 15px;
+    padding: 100px 15px 15px;
+    height: 100%;
     h1 {
         font-family: 'Anton', sans-serif;
         font-size: 3rem;
         color: $primary;
-        padding: 35px 0;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100px;
-            border-bottom: 4px solid $primary;
-        }
+        padding: 20px 0;
     }
-    &__icon {
+    &-icon {
         i {
             padding-right: 5px;
             font-size: 1.1rem;
         }
     }
-}
 
-.container-txt {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 15px;
-    &__item {
-        background-color: $primary;
-        padding: 15px;
-        width: 44%;
-        min-width: 300px;
-        border-radius: 10px;
-        height: 280px;
-        h2 {
-            text-transform: uppercase;
-            font-size: 1.3rem;
-            height: 30%;
-            margin: 0;
-            color: white;
+    h2 {
+        padding-top: 30px;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            border-bottom: 2px solid $primary;
         }
-        a {
-            color: black;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li a {
+            text-decoration: none;
+            color: #0487cc;
         }
     }
 }
 
-@media screen and (max-width: 768px) {
-    .container-title {
-        width: 300px;
+@media screen and (min-width: 768px) {
+    .container {
+        margin: 50px 25%;
+        border-radius: 10px;
+        padding-top: 50px;
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 100px 25%;
     }
 }

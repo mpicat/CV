@@ -5,39 +5,29 @@ $secondary: rgba(255,255,255, 0.9);
     background-image: url(../assets/wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 .nav {
     background-color: rgba(0,0,0,0.5);
+    padding-top: 30px;
+    width: 90px;
 }
 
-.btn-nav {
-    font-size: 2.2rem;
-    cursor: pointer;
-    background-color: $secondary;
-    margin: 30px 15px 15px;
-    padding: 10px 20px;
-    color: $primary;
-    border: none;
-    border-radius: 5px;
-}
-
-h2 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60px;
-        border-bottom: 4px solid $primary;
+.nav-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__btn {
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: $primary;
+        margin: 15px;
+        padding: 7px 15px;
+        color: black;
+        border: none;
+        border-radius: 5px;
     }
 }
 
@@ -45,17 +35,26 @@ ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 15px;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-transform: uppercase;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+            font-size: 1.7rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    } 
     &:hover {
-        text-decoration: underline;
+        color: $primary;
     }
 }
 
@@ -63,41 +62,9 @@ a {
     color: $primary;
 }
 
-.download {
-        background-color: $primary;
-        padding: 8px;
-        margin-top: 30px;
-        width: fit-content;
-        font-weight: 500;
-        border-radius: 4px;
-        text-decoration: none;
-        color: white;
-}
-
-.info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 0 40px 60px;
-    color: white;
-    font-weight: 600;
-    background-color: rgba(0,0,0, 0.8);
-}
-
-h3 {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60px;
-        border-bottom: 4px solid $primary;
+@media screen and (min-width: 768px) {
+    .nav-btn__btn {
+        background-color: $secondary;
+        color: $primary;
     }
 }

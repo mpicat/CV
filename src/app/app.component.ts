@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'CV de Maxime PICAT';
+  title = 'CV Maxime PICAT';
 
   toggleClass: boolean = false;
 }
